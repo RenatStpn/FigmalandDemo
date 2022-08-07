@@ -1,0 +1,176 @@
+.contact {
+    &__content {
+        @include flex(column, center,center,0);
+    }
+    padding-top: 21.3rem;
+    padding-bottom: 10.2rem;
+    &__title {
+        @include flex(column, center, center, 2.7rem);
+        margin-bottom: 5rem;
+        text-align: center;
+        &-head {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 55px;
+            letter-spacing: 0.2px;
+            color: #252B42;
+        }
+        &-subhead {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 40px;
+            letter-spacing: 0.2px;
+            color: #374754;
+            max-width: 570px;          
+        }
+    }
+    &__data {
+        @include flex(row, center, center, 5rem);
+    }
+    &__form {
+        padding: 52px 50px;
+        background: #FFFFFF;
+        border: 1px solid #DDDDDD;            
+        box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+        border-radius: 20px; 
+        max-width: 453px; 
+        margin-right: 5rem;
+        &:hover {
+            border: 1px solid $color-primary;
+        }   
+        form {
+            @include flex(column, center, start, 45px); 
+            .contact__form-head {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: 0.1px;
+                color: #252B42;   
+                margin-left: auto;
+                margin-right: auto;      
+            } 
+            input {
+                background: #F5F5F5;
+                border: 1px solid #E8E8E8;
+                border-radius: 39px;
+                padding: 19px 20px;
+                width: 100%;
+            }
+            textarea {
+                background: #F5F5F5;
+                border: 1px solid #E8E8E8;
+                border-radius: 0;
+                width: 353px;
+                height: 193px;
+                padding-top: 23px;
+                padding-left: 2rem;
+                resize: none;
+            }
+            input::placeholder, 
+            textarea::placeholder {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 16px;
+                letter-spacing: 0.1px;
+                color: #18171D;                   
+            }
+            .button {
+                @include button(no,none, auto, 16px, 59.5px);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 20px;
+                letter-spacing: 0.2px;                
+            }
+        }       
+    }
+    &__info {
+        @include flex(column, center, start, 0);
+        &-part{
+            width: 100%;
+            @include flex(row, center, center, 15px);
+            margin-bottom: 80px;
+        }
+        &-data {
+            width: 100%;
+            @include flex(column, center, center, 21px);
+            &--text {
+                padding: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 23px;
+                text-align: center;
+                letter-spacing: 0.1px;
+                color: #374754;     
+            }
+
+        }
+        &-location  {
+            cursor: pointer;
+            &:hover {
+                border: 1px solid $color-primary;
+            }
+            margin-bottom: 75px;
+            align-self: center;
+        }
+    }
+    &__partners {
+        @include flex(row, normal, normal, 32.33px);
+        cursor: pointer;
+    }
+}
+@include phone {
+    span {
+        display: none;
+    }
+    .contact {
+        &__title {
+            margin-bottom: 74px;
+        }
+        &__data {
+            @include flex(column, center, center, 7rem);
+        }
+        &__info {
+            order: 0;
+            align-items: center;
+        }
+        &__form {
+            order: 1;
+            max-width: 378px;
+            margin-left: 50%;
+            margin-right: 50%;
+            form {
+                textarea {
+                    width: 189px;
+                }
+            }
+        }
+        &__partners {
+            order: 1;
+            margin-bottom: 92px;
+        }
+        &__info-part {
+            @include flex(column, center, center, 3rem);
+            max-width: 349px;
+            order: 2;
+        }
+        &__info-location {
+            display: none;
+        }
+        &__info-data {
+            @include flex(row, start, center, 21px);
+            &--text {
+                text-align: start;
+            }
+        }
+        &-data {
+            @include flex(column, center, center, 0);
+        }
+    }
+}

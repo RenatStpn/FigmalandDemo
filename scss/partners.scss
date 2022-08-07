@@ -1,0 +1,62 @@
+.partners {
+    padding-top: 13rem;
+    padding-bottom: 8rem;
+    &__title {
+        @include flex(column, center, center, 2.7rem);
+        &-head {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 55px;
+            letter-spacing: 0.20000000298023224px;
+            color: #252B42;
+        }
+        &-subhead {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 0.20000000298023224px;
+            color: #374754;
+            text-align: center;
+            max-width: 56rem;
+            margin-bottom: 9rem;
+        }
+    }
+    &__icons  {
+        @include flex(row, center, normal, 0);
+        flex-wrap: wrap;
+        &-el {
+            padding: 31px 40px;
+            border: 1px solid #D8D8D8;
+            @include flex(column, center, center, 3.2rem);
+        }
+        .partners__client-name {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: 0.10000000149011612px;
+            text-align: left;
+            color: #374754;
+        }
+    }
+    .button {
+        margin-top: 8.1rem;
+        margin-left: auto;
+        margin-right: auto;
+        @include button($color-primary, 25rem, 60px, 16px, 59.6px);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0.10000000149011612px;
+    }
+}
+@include phone {
+    .partners__title-subhead {
+        max-width: 36rem;
+    }
+    .partners__icons {
+        gap: 3rem;
+        &-el:not(:nth-child(-n+3)) {
+            display: none;
+        }
+    }
+}

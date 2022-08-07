@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $graphic;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin: 0rem auto;
+  padding: 0 15rem;
+  @include phone {
+    padding: 0 0;
+  }
+}
+
+.button {
+  display: inline-block;
+  border-radius: 35px;
+  color: $color-white;
+  background: $color-primary;
+  cursor: pointer;
+}

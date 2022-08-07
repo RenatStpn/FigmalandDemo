@@ -1,0 +1,128 @@
+.subscription {
+    padding-bottom: 58px;
+    &__content {
+        @include flex(row, center, center, 5rem);
+        
+    }
+    &__text {
+        text-align: left;
+        color: #252B42;
+        padding: 121px 63px 0;
+        &-head1 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0.10000000149011612px;
+            margin-bottom: 1.7rem;
+            display: inline-block;
+        }
+        &-head2 {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 55px;
+            letter-spacing: 0.20000000298023224px;
+            margin-bottom: 3.5rem;
+            width: 340px;
+        }
+        .media {
+            display: none;
+        }
+        &-head3 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0.10000000149011612px;
+            width: 295px;
+
+        }
+        &-subhead {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1rem;
+            letter-spacing: 0.20000000298023224px;
+            margin-bottom: 3.6rem;
+        }
+ 
+    }
+    &__form  {
+        &-elements {
+            @include flex(row, center, center, 12px);
+            margin-bottom: 15.8rem;
+        }
+        &-input {
+            border: 1px solid #E8E8E8;
+            padding: 19px 166px 19px 39px;
+            background: linear-gradient(0deg, #E8E8E8, #E8E8E8),
+                        linear-gradient(0deg, #F4F4F4, #F4F4F4);
+            border-radius: 39px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0.10000000149011612px;
+        }
+        &-button {
+            @include button($color-primary, 172px, 58px, 19px, 38px);
+            border: 0;
+            width: 172px;
+        }
+    }
+}
+@include phone {
+    .subscription {
+        padding-top: 8rem;
+        padding-bottom: 114px;
+        &__content {
+            @include flex(column, center, center, 5rem);
+            span {
+                display: none;
+            }
+            img {
+                width: 389px;
+                height: 295px;
+                order: 2;
+            }
+        }
+        &__text {
+            @include flex(column, center,  center, 0);
+            &-head1 {
+                order: 0;
+            }
+            &-head2 {
+                display: none;
+            }
+            &-head3 {
+            }
+            &-subhead {
+
+            }
+     
+        }
+        .media  {
+            display: block;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 55px;
+            letter-spacing: 0.20000000298023224px;
+        }
+        &__form  {
+            &-elements {
+                @include flex(column, center, center, 1.2rem);
+            }
+            &-input {
+
+            }
+            &-button {
+                @include button($color-primary, 372px, 58px, 19px, 38px);
+                width: 372px;
+            }
+        }
+    }
+    .med {
+        position: relative;
+        top: 40rem;
+    }
+    .med__up  {
+        position: relative;
+        bottom: 40rem;
+    }
+}

@@ -1,0 +1,36 @@
+$tablet-width: 800px;
+$desktop-width: 1024px;
+$phone-width: 418px;
+
+@mixin phone {
+  @media (max-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin flex($direction, $justify, $align, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+@mixin button($bgColor, $width, $height, $pad-y, $pad-x) {
+  @include flex(unset, center, center, 0);
+   @if $bgColor == 'no' {
+    background: $color-primary
+   } @else {
+    background: $bgColor;
+   }
+  max-width: $width;
+  height: $height;
+  padding: $pad-y $pad-x;
+  border-radius: 10rem;
+}
+

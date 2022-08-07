@@ -1,0 +1,127 @@
+.features {
+    padding-bottom: 5.2rem;
+    &__content {
+        @include flex(column, center, center, 0);
+    }
+    &__header {
+        @include flex(column, center, center, 2.7rem);
+        text-align: center;
+        .features__title {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 55px;
+            letter-spacing: 0.20000000298023224px;
+            color: #252B42;
+        }
+        .features__subtitle {
+            max-width: 56rem;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 0.20000000298023224px;
+            color: #374754;
+            margin-bottom: 9rem;
+        }
+    }
+    &__discr {
+        @include flex(row, normal, center, 2.6rem);
+    }
+    &__icon {
+        @include flex(column, center, center, 3rem);
+        img {
+            width: 4.5rem;
+            height: 4.5rem;
+            object-fit: contain;
+        }
+        &-text {
+            text-align: center;
+            @include flex(column,center, center, 2rem);
+        }
+        &-title {
+            max-width: 27rem;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0.10000000149011612px;
+        }
+        &-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0.20000000298023224px;
+        }
+    }
+    &__video {
+        position: relative;
+        @include  flex(column, center, center, 0);
+        video {
+            max-width: 1177px;
+            box-shadow: 0px 8.14769172668457px 63.14461135864258px 0px #00000026;
+            border-radius: 44.8123px;
+            min-height: 65.8rem;
+            object-fit: cover;
+            z-index: -1;
+        }
+        margin-top: 14rem;
+        .button {
+            @include button(#2091F9, 187px, 187px, 7.1rem, 7.1rem);
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            img {
+                width: 3.9rem;
+                height: 4.6rem;
+                object-fit: contain;
+            }
+        }
+    }
+}
+@include phone {
+    .features {
+        padding: 9.5rem 1.8rem;
+        &__content {
+            @include flex(column, center, center, 0);
+        }    
+        &__header {
+            @include flex(column, center, center, 2.7rem);
+            text-align: center;
+            .features__title {
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 55px;
+            }
+            .features__subtitle {
+                span {
+                    display: none;
+                }
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 40px;
+                margin-bottom: 0;
+            }
+        }
+        &__discr {
+            order: 2;
+            @include flex(column, center, normal, 8rem);
+        }
+        &__video {
+            @include  flex(column, center, center, 0);
+            order: 1;
+            margin-top: 66px;
+            margin-bottom: 8rem;
+            video {
+                max-width: 325px;
+                min-height: 215px;
+            }
+        }
+        .button {
+            @include button(#2091F9, 61px, 61px, 2.1rem, 3.1rem);
+            img {
+                width: 1.28rem;
+                height: 1.4rem;
+                object-fit: contain;
+            }
+        }
+    }
+}    

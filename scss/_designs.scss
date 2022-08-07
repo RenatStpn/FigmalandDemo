@@ -1,0 +1,63 @@
+.organization {
+    padding-top: 22.6rem;
+    padding-bottom: 22.6rem;
+    &__content {
+        padding: 6rem 0;
+        @include flex(row, center, center, 13.8rem);
+    }
+    &__part {
+        @include flex(column, start, start, 7rem);
+    }
+    &__text {
+        &-header {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 55px;
+            letter-spacing: 0.20000000298023224px;
+            margin-bottom: 2.7rem;
+            color: #252B42;
+        }
+        &-subhead {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 0.20000000298023224px;
+            color: #374754;
+            width: 56rem;
+        }
+    }
+    .button {
+        @include button($color-primary, 250px, unset, 16px, 59.5px);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0.10000000149011612px;
+    }
+}
+@include phone {
+    .organization {
+       padding: 95px 41px;
+        &__content {
+            @include flex(column, center, center, 0);
+        }
+        &__part {
+            @include flex(column, center, center, 8rem);
+        }
+        .organization__laptop-icon{
+            margin-top: 8rem;
+            width: 29rem;
+            height: 18rem;
+        }
+        &__text {
+            text-align: center;
+            @include flex(column, center, center, 27px);
+            max-width: 315px;
+            span {
+                display: none;
+            }
+            &-subhead {
+                width: 265px;
+            }
+        }
+    }
+}

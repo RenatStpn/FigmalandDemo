@@ -1,0 +1,138 @@
+.pricing {
+    background: $color-ocean;
+    padding-top: 11rem;
+    padding-bottom: 10rem;
+    &__text {
+        @include flex(column, center, center, 27px);
+        color: $color-white;
+        text-align: center;
+        margin-bottom: 13.3rem;
+        &-head {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 55px;
+            letter-spacing: 0.20000000298023224px;
+        }
+        &-subhead {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 0.20000000298023224px;
+            max-width: 56rem;
+        }
+    }
+    &__nums {
+        @include flex(row, center, center, 5rem);
+        &-el {
+            background: $color-white;
+            padding: 43px;
+            border: 1px solid #DEDEDE;
+            border-radius: 10px;
+            transition: padding .7s linear;
+            @include flex(column, center, center, 0);
+            &:hover {
+                background: $color-primary;
+                padding: 86px 43px;
+                border: none;
+                .button {
+                    background: $color-white;
+                    color: $color-primary;
+                }          
+                .nums__head-title {
+                    color: white;
+                }
+                .nums__head-subtitle { 
+                    color: white;
+                }
+                .nums__subs {
+                    &-price {               
+                        color: white;                
+                    }
+                    &-text {
+                        @include flex(column, center, start, 0);
+                        &--sign {
+                            color: white;                
+                        }
+                        &--descr {
+                            color: white                    
+                        }
+                    }
+                }
+                .nums__features {
+                    color: white;     
+                }
+            }
+        }
+        .nums__head {
+            max-width: 15.5rem;
+            @include flex(column, center, center, 3px);
+            &-title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: 0.1px;
+                color: #252B42;
+            }
+            &-subtitle {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 23px;
+                text-align: center;
+                letter-spacing: 0.1px;
+                color: #374754;
+            }
+        }
+        .nums__subs {
+            @include flex(row, center, center, 1rem);
+            &-price {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 74px;
+                line-height: 84px;
+                letter-spacing: 0.2px;                
+                color: #252B42;                
+            }
+            &-text {
+                @include flex(column, center, start, 0);
+                &--sign {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 28px;
+                    letter-spacing: 0.1px;
+                    color: #252B42;                
+                }
+                &--descr {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 23px;
+                    letter-spacing: 0.1px;
+                    color: #374754;                    
+                }
+            }
+        }
+        .button {
+            @include button(no, none, auto, 18px, 75.5px);
+        }
+    }
+    .nums__features {
+        @include flex(column, center, center, 2rem);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+        color: #252B42;    
+        margin-bottom: 4rem;    
+    }
+}
+@include phone {
+    span  {
+        display: none;
+    }
+    .pricing__nums {
+        @include flex(column, center, center, 5rem);
+    }
+}
