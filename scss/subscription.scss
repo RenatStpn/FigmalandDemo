@@ -2,7 +2,6 @@
     padding-bottom: 58px;
     &__content {
         @include flex(row, center, center, 5rem);
-        
     }
     &__text {
         text-align: left;
@@ -42,7 +41,6 @@
             letter-spacing: 0.20000000298023224px;
             margin-bottom: 3.6rem;
         }
- 
     }
     &__form  {
         &-elements {
@@ -90,12 +88,6 @@
             &-head2 {
                 display: none;
             }
-            &-head3 {
-            }
-            &-subhead {
-
-            }
-     
         }
         .media  {
             display: block;
@@ -107,9 +99,6 @@
         &__form  {
             &-elements {
                 @include flex(column, center, center, 1.2rem);
-            }
-            &-input {
-
             }
             &-button {
                 @include button($color-primary, 372px, 58px, 19px, 38px);
